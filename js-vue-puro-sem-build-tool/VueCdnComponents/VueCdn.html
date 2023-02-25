@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="logo laura.png">
+  <title>Vue</title>
+</head>
+<body>
+  <div id="app">
+    <h1>{{titulo}}</h1>
+    <input type="text" placeholder="Insira um titulo" v-model="titulo"></input>
+    <br>
+    <section>
+      <h3>Adicione Cliente</h3>
+      <input type="text" placeholder="joaquina.." v-model="inputCliente"></input>
+      <button @click="add()" style="margin-left: 1rem;">+</button>
+      <div v-for="(nome, i) in clientes" :key="nome">
+          <span>{{ nome }}</span>
+          <button @click="remover(i)" style="margin-left: 1rem;">Remover</button>
+      </div>
+    </section>
+    <hr>
+    <app-btn texto="laranja" @btn-clickado="btnClickado"></app-btn>
+    <br>
+    <br>
+    <app-btn texto="banana" @btn-clickado="btnClickado"></app-btn>
+    <br>
+    <br>
+    <app-btn></app-btn>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.min.js"></script>
+
+  <script src="components/AppBtn.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<script setup>
+
+</script>
+
+<template>
+  <alert-app></alert-app>
+  <nav>
+    <router-link to="/home">Home</router-link> |
+    <router-link to="/perfil">Perfil</router-link> |
+    <router-link to="/notificacoes">Notificações</router-link> |
+    <router-link to="/">Sair</router-link>
+  </nav>
+  <router-view></router-view>
+</template>
+
+<style scoped>
+</style>
